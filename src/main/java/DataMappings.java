@@ -32,14 +32,14 @@ public class DataMappings {
             {
                 // may need to guard this more
                 UserTask userTask = (UserTask) e.getParentElement().getParentElement().getParentElement();
-                log.info("Parent {} has input {}", userTask.getId(), e.getCamundaName());
+                log.info("Parent {} has input {} with value {}", userTask.getId(), e.getCamundaName(), e.getTextContent());
             });
 
             modelInst.getModelElementsByType(CamundaOutputParameter.class).forEach(e ->
             {
                 // may need to guard this more
                 UserTask userTask = (UserTask) e.getParentElement().getParentElement().getParentElement();
-                log.info("Parent {} has input {}", userTask.getId(), e.getCamundaName());
+                log.info("Parent {} has input {} with value {}", userTask.getId(), e.getCamundaName(), e.getTextContent());
             });
 
             Bpmn.writeModelToFile(file, modelInst);
