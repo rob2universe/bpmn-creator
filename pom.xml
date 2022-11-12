@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <camunda.version>7.17.0</camunda.version>
+        <camunda.version>7.18.0</camunda.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -33,6 +33,10 @@
         <dependency>
             <groupId>org.camunda.bpm.model</groupId>
             <artifactId>camunda-bpmn-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.camunda.bpm.model</groupId>
+            <artifactId>camunda-dmn-model</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -81,7 +85,11 @@
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.7.1</version>
+        </dependency>
     </dependencies>
 
 <!--    <build>
